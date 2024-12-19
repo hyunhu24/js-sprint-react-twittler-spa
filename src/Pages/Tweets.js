@@ -24,8 +24,13 @@ const Tweets = () => {
       </div>
       <ul className="tweets">
         {dummyTweets.map((tweet) => {
+
+        const myTweet = tweet.username === "kimcoding";
+        const myTweetClass = myTweet
+  ? "tweet myTweet"
+  : "tweet";
           return (
-          <li className="tweet" key={tweet.id}>
+          <li className={myTweetClass} key={tweet.id}>
             <div className="tweet__profile">
               <img src={tweet.picture} />
             </div>

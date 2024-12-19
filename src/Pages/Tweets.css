@@ -1,7 +1,7 @@
 .tweets {
   flex: 1 0 80vh;
   border: 2px solid var(--tweets-component-color);
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 /* Tweet 컴포넌트 */
@@ -13,8 +13,15 @@
   border-bottom: 1px solid var(--main-border-color);
 }
 
+.tweet.myTweet{
+  background-color: #dce1ff70;
+}
+
 .tweet:hover {
   background-color: var(--shade-color);
+}
+.tweet.myTweet:hover {
+  background-color: #dce1ffa3;
 }
 
 .tweet__profile {
